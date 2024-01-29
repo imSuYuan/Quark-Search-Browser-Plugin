@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quark Search</title>
+<link href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<style>
+  .search-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .search-box {
+    width: 50%;
+    min-width: 300px;
+  }
+  .rounded-lg {
+    border-radius: 1rem; /* 16px */
+  }
+</style>
+</head>
+<body>
+<div class="search-container">
+  <h1 class="text-5xl font-bold mb-8">Quark</h1>
+  <form action="https://www.quark.cn/s" method="GET" class="search-box">
+    <div class="flex">
+      <input type="text" name="q" class="p-4 border rounded-l-lg flex-grow" placeholder="Search...">
+      <button type="submit" class="bg-gray-800 text-white p-4 rounded-r-lg hover:bg-gray-700">Search</button>
+    </div>
+  </form>
+</div>
+<script>
+</script>
+</body>
+</html>

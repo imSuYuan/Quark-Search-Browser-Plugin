@@ -1,0 +1,30 @@
+{
+    "manifest_version": 2,
+    "name": "quark search",
+    "version": "2024.1",
+    "description": "use quark.",
+    "permissions": ["storage", "webRequest", "webRequestBlocking", "<all_urls>"],
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ],
+    "chrome_settings_overrides": {
+      "homepage": "https://123.quark.cn/",
+      "search_provider": {
+        "name": "Quark",
+        "keyword": "quark.cn",
+        "search_url": "https://www.quark.cn/s?q={searchTerms}",
+        "is_default": true
+      }
+    },
+    "chrome_url_overrides": {
+        "newtab": "newtab.html"
+    },
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": true
+    }
+  }
+  
